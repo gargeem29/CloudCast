@@ -24,15 +24,19 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+
+  /*justify-content: space-between; */
 }
 
 .search input {
+  flex: 1;
   border: 0;
   outline: 0;
   background: #fbcbff;
   color: #000000;
-  padding: 10px 25px;
+  padding: 10px 20px;
   height: 60px;
   border-radius: 30px;
   flex: 1;
@@ -52,7 +56,7 @@ body {
 }
 
 .search button img {
-  width: 60px;
+  width: 30px;
 }
 
 .weather-icon {
@@ -110,4 +114,60 @@ wind {
   display: none;
   /* very kaam ki cheez as it keeps stuff hidden*/
 
+}
+
+@media (min-width: 600px) {
+  .search {
+    gap: 20px;
+  }
+
+  .weather-icon {
+    width: 120px;
+  }
+
+  .weather h1 {
+    font-size: 60px;
+  }
+
+  .weather h2 {
+    font-size: 60px;
+  }
+
+  .details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding: 30px;
+  }
+
+  .search {
+    gap: 30px;
+  }
+
+  .weather-icon {
+    width: 150px;
+  }
+
+  .weather h1 {
+    font-size: 70px;
+  }
+
+  .weather h2 {
+    font-size: 70px;
+  }
+
+  .details {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card {
+    max-width: 800px;
+  }
 }
